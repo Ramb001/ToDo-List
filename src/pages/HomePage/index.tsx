@@ -64,7 +64,7 @@ function HomePage() {
             }}
           />
         </div>
-        {data.map((obj: objType, i) => {
+        {data.map((obj: objType) => {
           if (
             view &&
             ((status === "active" && obj.status == "progress") ||
@@ -74,7 +74,7 @@ function HomePage() {
             return (
               <ToDoItem
                 props={{ object: obj, data: data, setData: setData }}
-                key={i}
+                key={obj.id}
               />
             );
           }
