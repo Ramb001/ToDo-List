@@ -2,6 +2,7 @@ import { SetStateAction, Dispatch } from "react";
 import styles from "./DownBar.module.scss";
 
 type objType = {
+  id: string;
   title: string;
   status: "done" | "progress";
 };
