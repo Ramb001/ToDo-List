@@ -67,8 +67,8 @@ function HomePage() {
         {data.map((obj: objType) => {
           if (
             view &&
-            ((status === "active" && obj.status == "progress") ||
-              (status === "completed" && obj.status == "done") ||
+            ((status === "active" && obj.status === "progress") ||
+              (status === "completed" && obj.status === "done") ||
               status === "all")
           ) {
             return (
