@@ -5,6 +5,7 @@ import DownBar from "../../components/DownBar";
 import DownArrow from "../../assets/icons/DownArrow";
 
 type objType = {
+  id: string;
   title: string;
   status: "done" | "progress";
 };
@@ -18,7 +19,11 @@ function HomePage() {
   function addItem() {
     if (title.length !== 0) {
       let temp = [...data];
-      temp.push({ title: title, status: "progress" });
+      temp.push({
+        id: Math.random().toString(16).slice(2),
+        title: title,
+        status: "progress",
+      });
       setData(temp);
       setTitle("");
     }
@@ -27,7 +32,11 @@ function HomePage() {
   function addItemOnEnter(key: string) {
     if (title.length !== 0 && key === "Enter") {
       let temp = [...data];
-      temp.push({ title: title, status: "progress" });
+      temp.push({
+        id: Math.random().toString(16).slice(2),
+        title: title,
+        status: "progress",
+      });
       setData(temp);
       setTitle("");
     }
@@ -62,7 +71,12 @@ function HomePage() {
               (status === "completed" && obj.status == "done") ||
               status === "all")
           ) {
-            return <ToDoItem props={obj} key={i} />;
+            return (
+              <ToDoItem
+                props={{ object: obj, data: data, setData: setData }}
+                key={i}
+              />
+            );
           }
         })}
         <DownBar
