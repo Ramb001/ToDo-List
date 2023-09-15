@@ -24,6 +24,15 @@ function HomePage() {
     }
   }
 
+  function addItemOnEnter(key: string) {
+    if (title.length !== 0 && key === "Enter") {
+      let temp = [...data];
+      temp.push({ title: title, status: "progress" });
+      setData(temp);
+      setTitle("");
+    }
+  }
+
   return (
     <div className={styles.main}>
       <div className={styles.list}>
@@ -41,6 +50,9 @@ function HomePage() {
               setTitle(e.target.value);
             }}
             onBlur={addItem}
+            onKeyDown={(e) => {
+              addItemOnEnter(e.key);
+            }}
           />
         </div>
         {data.map((obj: objType, i) => {
