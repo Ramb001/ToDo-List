@@ -1,26 +1,43 @@
 import { CheckCircle, CircleOutlined } from "@mui/icons-material";
 import styles from "./ToDoItem.module.scss";
 import { Checkbox } from "@mui/material";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 
 type objType = {
+  id: string;
   title: string;
   status: "done" | "progress";
 };
 
+type propsType = {
+  object: objType;
+  data: Array<objType>;
+  setData: Dispatch<SetStateAction<Array<objType>>>;
+};
+
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
-function ToDoItem({ props }: { props: objType }) {
-  const [status, setStatus] = useState(props.status);
+function ToDoItem({ props }: { props: propsType }) {
+  const [status, setStatus] = useState(props.object.status);
 
   function changeStatus(bool: boolean) {
+    let temp = [...props.data];
     if (bool) {
       setStatus("done");
-      props.status = "done";
+      temp.map((obj) => {
+        if (obj.id === props.object.id) {
+          obj.status = "done";
+        }
+      });
     } else {
       setStatus("progress");
-      props.status = "progress";
+      temp.map((obj) => {
+        if (obj === props.object) {
+          obj.status = "progress";
+        }
+      });
     }
+    props.setData(temp);
   }
 
   return (
@@ -41,7 +58,7 @@ function ToDoItem({ props }: { props: objType }) {
           color: status === "done" ? "gray" : "black",
         }}
       >
-        {props.title}
+        {props.object.title}
       </div>
     </div>
   );
