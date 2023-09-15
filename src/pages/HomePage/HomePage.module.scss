@@ -1,0 +1,23 @@
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.input {
+    padding: 10px 16px;
+    font-size: 20px;
+    font-weight: lighter;
+    outline: none;
+    border: 0.5px solid rgb(245, 245, 245);
+}
+
+.title {
+    color: rgb(234, 225, 224);
+    font-weight: lighter;
+    font-size: 54px;
+    display: flex;
+    justify-content: center;
+}
