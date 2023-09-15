@@ -27,6 +27,7 @@ function ToDoItem({ props }: { props: objType }) {
     <div className={styles.box}>
       <Checkbox
         {...label}
+        checked={status === "done" ? true : false}
         color="success"
         icon={<CircleOutlined className={styles.icon} />}
         checkedIcon={<CheckCircle className={styles.icon} />}
