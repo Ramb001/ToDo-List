@@ -16,8 +16,10 @@ function ToDoItem({ props }: { props: objType }) {
   function changeStatus(bool: boolean) {
     if (bool) {
       setStatus("done");
+      props.status = "done";
     } else {
       setStatus("progress");
+      props.status = "progress";
     }
   }
 
