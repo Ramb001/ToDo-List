@@ -7,11 +7,11 @@
 }
 
 .input {
-    padding: 10px 16px;
+    width: 100%;
     font-size: 20px;
     font-weight: lighter;
     outline: none;
-    border: 0.5px solid rgb(245, 245, 245);
+    border: none
 }
 
 .title {
@@ -20,4 +20,22 @@
     font-size: 54px;
     display: flex;
     justify-content: center;
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    background: #ffff;
+    padding: 10px 16px;
+    width: 100%;
+    border: 0.5px solid rgb(245, 245, 245);
+}
+
+.arrowBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
