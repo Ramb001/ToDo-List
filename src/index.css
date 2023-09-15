@@ -1,6 +1,6 @@
 @font-face {
   font-family: Roboto;
-  src: url("../src/assets/fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("../src/assets/fonts/Roboto-Thin.ttf") format("truetype");
 }
 
 * {
@@ -9,6 +9,6 @@
 }
 
 body {
-  background: #ffff;
+  background: rgb(245, 245, 245);
   margin: 0;
 }
