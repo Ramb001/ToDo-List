@@ -1,6 +1,6 @@
 # Preview
 
-Project always updates after every commit on Vercel. You can follow the link for handle new updates:
+Project always updates after every commit on Vercel. You can follow the link for handling new updates:
 [Click here](https://todo-list-ramb001.vercel.app)
 
 # How to run the project
