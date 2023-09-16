@@ -4,5 +4,5 @@
 
 # How to run the project
 
-`git clone https://github.com/Ramb001/ToDo-List.git`
-`npm i & npm run start`
+``git clone https://github.com/Ramb001/ToDo-List.git``
+``npm i & npm run start``
