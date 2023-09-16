@@ -1,13 +1,16 @@
 .box {
     display: flex;
     flex-direction: row;
-    gap: 35px;
+    gap: 50px;
     background: #ffff;
     padding: 10px 16px;
     font-weight: 100;
-    font-size: 16px;
     border: 0.5px solid rgb(245, 245, 245);
     align-items: center;
+
+    @media screen and (max-width: 700px) {
+        gap: 25px;
+    }
 }
 
 .button {
