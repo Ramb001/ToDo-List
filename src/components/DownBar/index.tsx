@@ -30,8 +30,8 @@ function DownBar({ props }: { props: propsType }) {
 
   return (
     <div className={styles.box}>
-      <div>{props.data.length - count} items left</div>
-      <div>
+      <div className={styles.text}>{props.data.length - count} items left</div>
+      <div className={styles.buttonsBox}>
         <button
           className={styles.button}
           onClick={() => {
